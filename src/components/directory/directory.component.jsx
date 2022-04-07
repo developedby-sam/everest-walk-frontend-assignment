@@ -25,14 +25,13 @@ const PRODUCT_CATEGORY = [
     title: "mobiles",
     imageUrl: "https://electronic-ecommerce.herokuapp.com/onePlusNord.jpg",
     size: "large",
-    id: 3,
+    id: 4,
     linkUrl: "shop/mobiles",
   },
 ];
 
 const Directory = () => {
   const [products, setProducts] = useState(PRODUCT_CATEGORY);
-  console.log(products);
 
   return (
     <div className="directory-menu">

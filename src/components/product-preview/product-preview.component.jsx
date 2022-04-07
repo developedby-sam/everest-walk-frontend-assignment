@@ -9,10 +9,7 @@ const ProductPreview = () => {
   useEffect(() => {
     fetch("https://electronic-ecommerce.herokuapp.com/api/v1/product")
       .then((response) => response.json())
-      .then((response) => {
-        setProducts(response.data.product);
-        console.log(response.data.product);
-      });
+      .then((response) => setProducts(response.data.product));
   }, []);
 
   return (

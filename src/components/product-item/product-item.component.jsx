@@ -6,7 +6,7 @@ import CustomButton from "../custom-button/custom-button.component";
 
 const ProductItem = ({ name, price, image, stock, category }) => {
   const imageUrl = `https://electronic-ecommerce.herokuapp.com/${image}`;
-  console.log(imageUrl);
+
   return (
     <div className="product-item">
       <div
