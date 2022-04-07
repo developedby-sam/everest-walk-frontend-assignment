@@ -9,10 +9,13 @@ $base-color: #334155;
 }
 
 .header {
-  font-weight: 600;
-  color: $base-color;
-  font-size: 1.8rem;
   width: 30%;
+
+  h1 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: $base-color;
+  }
 }
 
 .group {

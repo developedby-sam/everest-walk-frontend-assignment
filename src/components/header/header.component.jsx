@@ -5,7 +5,9 @@ import "./header.styles.scss";
 
 const Header = () => (
   <div className="header-container">
-    <h1 className="header">EW | Electronic Shop</h1>
+    <Link className="header" to="/">
+      <h1>EW | Electronic Shop</h1>
+    </Link>
     <div className="group">
       <Link to="/">Home</Link>
       <Link to="/shop">Shop</Link>
