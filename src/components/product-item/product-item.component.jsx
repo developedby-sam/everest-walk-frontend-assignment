@@ -1,6 +1,9 @@
 import React from "react";
 import "./product-item.styles.scss";
 
+// components
+import CustomButton from "../custom-button/custom-button.component";
+
 const ProductItem = ({ name, price, image, stock, category }) => {
   const imageUrl = `https://electronic-ecommerce.herokuapp.com/${image}`;
   console.log(imageUrl);
@@ -23,6 +26,7 @@ const ProductItem = ({ name, price, image, stock, category }) => {
           </span>
         </div>
       </div>
+      <CustomButton text={"ADD TO CART"} />
     </div>
   );
 };

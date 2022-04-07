@@ -6,9 +6,19 @@
   flex: 0 0 350px;
   padding: 2rem 1rem;
   border: 1px solid #cbd5e1;
+  position: relative;
 
   &:hover {
     border: 1px solid #64748b;
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.2),
+      0 8px 10px -6px rgb(0 0 0 / 0.2);
+
+    .custom-button {
+      display: flex;
+      opacity: 1;
+      pointer-events: initial;
+      transform: scale(1);
+    }
   }
 
   .image {
