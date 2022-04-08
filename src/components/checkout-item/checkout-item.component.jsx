@@ -1,9 +1,16 @@
 import React from "react";
+import { connect } from "react-redux";
 
 // components and styles
 import "./checkout-item.styles.scss";
+import {
+  clearItemFromCart,
+  addItem,
+  removeItem,
+} from "../../redux/cart/cart.actions";
 
-const ChechkoutItem = ({ cartItem: { name, price, quantity, image } }) => {
+const ChechkoutItem = ({ cartItem, clearItem, addItem, removeItem }) => {
+  const { name, price, quantity, image } = cartItem;
   const imageUrl = `https://electronic-ecommerce.herokuapp.com/${image}`;
   return (
     <div className="checkout-item">
@@ -11,11 +18,27 @@ const ChechkoutItem = ({ cartItem: { name, price, quantity, image } }) => {
         <img src={imageUrl} alt="item" />
       </div>
       <span className="name">{name}</span>
-      <span className="quantity">{quantity}</span>
+      <span className="quantity">
+        <div className="arrow" onClick={() => removeItem(cartItem)}>
+          &#10094;
+        </div>
+        <span className="value">{quantity}</span>
+        <div className="arrow" onClick={() => addItem(cartItem)}>
+          &#10095;
+        </div>
+      </span>
       <span className="price">{price}</span>
-      <div className="remove-button">&#10005;</div>
+      <div className="remove-button" onClick={() => clearItem(cartItem)}>
+        &#10005;
+      </div>
     </div>
   );
 };
 
-export default ChechkoutItem;
+const mapDispatchToProps = (dispatch) => ({
+  clearItem: (item) => dispatch(clearItemFromCart(item)),
+  addItem: (item) => dispatch(addItem(item)),
+  removeItem: (item) => dispatch(removeItem(item)),
+});
+
+export default connect(null, mapDispatchToProps)(ChechkoutItem);
