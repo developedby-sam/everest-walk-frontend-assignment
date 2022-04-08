@@ -26,7 +26,7 @@ const ProductItem = ({ name, price, image, stock, category }) => {
           </span>
         </div>
       </div>
-      <CustomButton text={"ADD TO CART"} />
+      <CustomButton id="btn-addToCart">ADD TO CART</CustomButton>
     </div>
   );
 };

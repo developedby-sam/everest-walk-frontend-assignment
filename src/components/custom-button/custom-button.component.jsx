@@ -1,10 +1,10 @@
 import React from "react";
 import "./custom-button.styles.scss";
 
-const CustomButton = function ({ text, ...otherButtonProps }) {
+const CustomButton = function ({ children, ...otherButtonProps }) {
   return (
     <button className="custom-button" {...otherButtonProps}>
-      {text}
+      {children}
     </button>
   );
 };
