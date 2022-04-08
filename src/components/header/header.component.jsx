@@ -14,11 +14,11 @@ const Header = ({ hidden }) => {
         <h1>EW | Electronic Shop</h1>
       </Link>
       <div className="options">
+        <Link className="option" to="/">
+          HOME
+        </Link>
         <Link className="option" to="shop">
           SHOP
-        </Link>
-        <Link className="option" to="contact">
-          CONTACT
         </Link>
         <CartIcon />
       </div>
