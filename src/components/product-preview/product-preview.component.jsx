@@ -14,8 +14,8 @@ const ProductPreview = () => {
 
   return (
     <div className="product-preview">
-      {products.map(({ id, ...otherProductProps }) => (
-        <ProductItem key={id} {...otherProductProps} />
+      {products.map((item) => (
+        <ProductItem key={item.id} item={item} />
       ))}
     </div>
   );

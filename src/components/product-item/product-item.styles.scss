@@ -8,7 +8,10 @@
   border: 1px solid #cbd5e1;
   position: relative;
 
-  #btn-addToCart {
+  .custom-button {
+    width: 80%;
+    position: absolute;
+    bottom: 30%;
     opacity: 0;
     pointer-events: none;
     transform: scale(0.7);
@@ -19,7 +22,7 @@
     box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.2),
       0 8px 10px -6px rgb(0 0 0 / 0.2);
 
-    #btn-addToCart {
+    .custom-button {
       display: flex;
       opacity: 1;
       pointer-events: initial;
