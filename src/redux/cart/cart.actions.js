@@ -1,4 +1,5 @@
-export const setCurrentCart = (item) => ({
-  type: "SET_CURRENT_CART",
-  payload: item,
+import CartActionTypes from "./cart.types";
+
+export const toggleCartHidden = () => ({
+  type: CartActionTypes.TOGGLE_CART_HIDDEN,
 });

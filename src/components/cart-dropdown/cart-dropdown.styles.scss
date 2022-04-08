@@ -8,7 +8,7 @@
   padding: 10px;
   border: 1px solid black;
   background-color: white;
-  top: 90px;
+  top: 10vh;
   right: 8rem;
   z-index: 5;
 
@@ -22,5 +22,14 @@
   button {
     position: relative;
     bottom: 0;
+    background-color: rgba(#334155, 0.9);
+    border: 1px solid #f1f5f9;
+    color: #f1f5f9;
+
+    &:hover {
+      background-color: rgba(#f1f5f9, 0.9);
+      border: 1px solid #334155;
+      color: #334155;
+    }
   }
 }
