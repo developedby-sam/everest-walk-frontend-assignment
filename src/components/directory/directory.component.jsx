@@ -7,26 +7,26 @@ const PRODUCT_CATEGORY = [
     title: "laptops",
     imageUrl: "https://electronic-ecommerce.herokuapp.com/dellxps15.jpg",
     id: 1,
-    linkUrl: "shop/laptops",
+    linkUrl: "shop",
   },
   {
     title: "keyboards",
     imageUrl: "https://electronic-ecommerce.herokuapp.com/fantechkeyboard.jpg",
     id: 2,
-    linkUrl: "shop/keyboards",
+    linkUrl: "shop",
   },
   {
     title: "headsets",
     imageUrl: "https://electronic-ecommerce.herokuapp.com/fantechHeadset.jpg",
     id: 3,
-    linkUrl: "shop/headsets",
+    linkUrl: "shop",
   },
   {
-    title: "mobiles",
+    title: "smartphones",
     imageUrl: "https://electronic-ecommerce.herokuapp.com/onePlusNord.jpg",
     size: "large",
     id: 4,
-    linkUrl: "shop/mobiles",
+    linkUrl: "shop",
   },
 ];
 

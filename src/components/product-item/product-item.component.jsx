@@ -4,9 +4,9 @@ import { connect } from "react-redux";
 // components
 import "./product-item.styles.scss";
 import CustomButton from "../custom-button/custom-button.component";
-import { addItem } from "../../redux/cart/cart.actions";
+import { addItem, showCart } from "../../redux/cart/cart.actions";
 
-const ProductItem = ({ item, addItem }) => {
+const ProductItem = ({ item, addItem, showCart }) => {
   const { name, price, image, stock, category } = item;
   const imageUrl = `https://electronic-ecommerce.herokuapp.com/${image}`;
 
@@ -29,13 +29,21 @@ const ProductItem = ({ item, addItem }) => {
           </span>
         </div>
       </div>
-      <CustomButton onClick={() => addItem(item)}>ADD TO CART</CustomButton>
+      <CustomButton
+        onClick={() => {
+          addItem(item);
+          showCart();
+        }}
+      >
+        ADD TO CART
+      </CustomButton>
     </div>
   );
 };
 
 const mapDispatchToProps = (dispatch) => ({
   addItem: (item) => dispatch(addItem(item)),
+  showCart: () => dispatch(showCart()),
 });
 
 export default connect(null, mapDispatchToProps)(ProductItem);
