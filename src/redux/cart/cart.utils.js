@@ -11,5 +11,5 @@ export const addItemToCart = (cartItems, cartItemToAdd) => {
     );
   }
 
-  return [...cartitems, { ...cartItemToAdd, quantity: 1 }];
+  return [...cartItems, { ...cartItemToAdd, quantity: 1 }];
 };
