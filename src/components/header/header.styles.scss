@@ -33,6 +33,14 @@ $base-color: #334155;
       font-weight: 500;
       letter-spacing: 0.01rem;
       color: $base-color;
+
+      &:not(:last-child) {
+        margin-right: 20px;
+      }
+
+      &.active {
+        border: 1px solid #334155;
+      }
     }
   }
 }

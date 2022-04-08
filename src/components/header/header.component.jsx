@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { connect } from "react-redux";
 
 // components and stylings
@@ -8,16 +8,20 @@ import CartIcon from "../cart-icon/cart-icon.component";
 import CartDropdown from "../cart-dropdown/cart-dropdown.component";
 
 const Header = ({ hidden }) => {
+  const pathname = useLocation().pathname;
   return (
     <div className="header">
       <Link to="/">
         <h1>EW | Electronic Shop</h1>
       </Link>
       <div className="options">
-        <Link className="option" to="/">
+        <Link className={`${pathname == "/" ? "active" : ""} option`} to="/">
           HOME
         </Link>
-        <Link className="option" to="shop">
+        <Link
+          className={`${pathname == "/shop" ? "active" : ""} option`}
+          to="shop"
+        >
           SHOP
         </Link>
         <CartIcon />

@@ -3,7 +3,7 @@ import "./product-preview.styles.scss";
 
 import ProductItem from "../product-item/product-item.component";
 
-const ProductPreview = () => {
+const ProductPreview = ({ searchValue }) => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -14,9 +14,15 @@ const ProductPreview = () => {
 
   return (
     <div className="product-preview">
-      {products.map((item) => (
-        <ProductItem key={item.id} item={item} />
-      ))}
+      {products
+        .filter(
+          (product) =>
+            product.name.toLowerCase().includes(searchValue) ||
+            product.category.includes(searchValue)
+        )
+        .map((item) => (
+          <ProductItem key={item.id} item={item} />
+        ))}
     </div>
   );
 };
